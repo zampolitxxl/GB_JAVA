@@ -1,7 +1,5 @@
 package ru.gb;
 
-import java.util.Arrays;
-
 public class HWLes2 {
     public static void main(String[] args) {
 
@@ -22,20 +20,25 @@ public class HWLes2 {
 
 
         // зададим строку
-        String s1 = "abcde";
+        String s1 = "abcba";
         //проеверем по методу палиндром ли она
         System.out.println(isPalindrome(s1)); // true
-
+    }
         //создадим метол првоерки isPalindrome
 
         private static boolean isPalindrome (String source){
             //создаем цикли проверки первого и последнего элемента
             int count = 0;
-            for (int i = 0; i < source.length() / 2; i++) {
+            int l = source.length();
+
+
+            for (int i = 0; i < l/2; i++) {
+
                 //сравниваем первый и последний элемент на НЕравенство
 
-                if (source.charAt(i) != source.charAt(source.length() - i)) {
+                if (source.charAt(i) != source.charAt(source.length() - i-1)) {
                     count++;
+
                 }
             }
             if (count > 0) {
@@ -46,4 +49,3 @@ public class HWLes2 {
 
         }
     }
-}

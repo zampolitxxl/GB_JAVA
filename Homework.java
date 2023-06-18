@@ -16,6 +16,10 @@ public class Homework {
 
         System.out.println(isLeapYear(2003)); // true
 
+        //Задаание второго семинара
+        String s1 = "abcde";
+
+        System.out.println(isPalindrome(s1)); // true
 
 
         printString("abcd", 5); // abcdabcdabcdabcdabcd
@@ -148,7 +152,23 @@ public class Homework {
             arr[i][i]=num;
                 }
             }
+    private static boolean isPalindrome(String source){
+        //создаем цикли проверки первого и последнего элемента
+        int count = 0;
+        for (int i = 0; i < source.length() / 2; i++) {
+            //сравниваем первый и последний элемент на НЕравенство
 
+            if (source.charAt(i) != source.charAt(source.length() - i)) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
 
 
     /**
